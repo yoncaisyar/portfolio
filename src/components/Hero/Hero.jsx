@@ -4,7 +4,8 @@ import { ArrowDown } from 'lucide-react';
 import styles from './Hero.module.css';
 
 // Yonca's illustration - loaded from public folder for better performance
-const heroImage = '/yonca-profil.png';
+const baseUrl = import.meta.env.BASE_URL;
+const heroImage = `${baseUrl}yonca-profil.png`;
 
 export default function Hero() {
   const { t } = useTranslation();
