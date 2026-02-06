@@ -34,6 +34,36 @@
             "description": "This logo redesigned for Wush Wush Coffee Shop skillfully combines the shop's initial letter \"W\" with a coffee cup form. The fluid and wavy \"W\" form in the center, using dark brown and cream tones, functions not only as coffee steam but also as an abstract representation of the high-altitude mountainous areas where Wush Wush coffee grows."
           }
         }
+      },
+      "afis-reklam": {
+        "title": "Poster and Advertising Campaigns",
+        "projects": {
+          "dior": {
+            "title": "DIOR",
+            "subtitle": "Eyewear Collection",
+            "description": "This poster campaign combines luxury and an achievable dream with the slogan \"PARIS IS SO CLOSE\" to promote Dior's new eyewear collection. The campaign positions the glasses not just as a fashion accessory, but as a portal that brings the elegance, charm, and style of Paris within sight. The mysterious and captivating model image emphasizes the confidence and sophistication behind Dior glasses; used across various media from large-scale billboards to shopping mall panels, it invites the target audience to the heart of global fashion."
+          },
+          "yetenek-sinavi": {
+            "title": "Talent Exam",
+            "subtitle": "Conservatory",
+            "description": "This poster prepared for the conservatory's 2025 talent exam combines the theme of classical art and music with elegant typography and an illustrative violin figure. An artistic atmosphere is created with aesthetic lines and musical note visuals."
+          },
+          "arboris-afis": {
+            "title": "ARBORIS",
+            "subtitle": "Campaign Poster",
+            "description": "This advertising poster designed specifically for ARBORIS company presents the \"30% Discount on All Single Seats\" campaign with a simple and classic composition. Soft tones, natural texture feel, and an elegant font choice emphasize the brand's warm and trustworthy image."
+          },
+          "bilgilendirme-yarisma": {
+            "title": "Information and Competition",
+            "subtitle": "Water Scarcity Awareness",
+            "description": "This poster designed to draw attention to water scarcity adopts a minimal approach. With a blue background and a simple iconographic watermelon slice symbol, the message \"life cannot exist without water\" is conveyed in a simple yet powerful way. The design was prepared within the scope of a competition aimed at creating environmental awareness."
+          },
+          "selcuk-ecza-afis": {
+            "title": "Selçuk Pharmacy",
+            "subtitle": "Billboard Design",
+            "description": "In this billboard design I prepared for Selçuk Pharmacy Warehouse, I highlighted the brand's themes of trust and health. The slogan \"Your Health is Guaranteed with Every Baggage\" is supported by the baggage tag and medical bag composition in the visual, conveying the brand's reliable service approach with a strong visual message."
+          }
+        }
       }
     },
     "items": {

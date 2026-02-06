@@ -51,6 +51,17 @@ function CategorySlider({ category }) {
 
   return (
     <div className={styles.categorySection}>
+      {/* Kategori Başlığı */}
+      <motion.h3
+        className={styles.categoryTitle}
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-50px' }}
+        transition={{ duration: 0.6 }}
+      >
+        {t(`projects.categories.${category.id}.title`)}
+      </motion.h3>
+
       {/* Slider Container */}
       <div className={styles.sliderContainer}>
         <button
@@ -103,7 +114,6 @@ function CategorySlider({ category }) {
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.3 }}
         >
-          <span className={styles.projectCategory}>{t(`projects.categories.${category.id}.title`)}</span>
           <h3 className={styles.projectTitle}>{t(`projects.categories.${category.id}.projects.${activeProject.id}.title`)}</h3>
         </motion.div>
       </AnimatePresence>
@@ -118,7 +128,8 @@ function ProjectCard({ project, categoryId }) {
   const hasMultipleImages = project.images && project.images.length > 1;
   const coverImage = project.images[0];
   const detailImage = hasMultipleImages ? project.images[1] : coverImage;
-  const currentImage = isHovered && hasMultipleImages ? detailImage : coverImage;
+  const hasSideBySideDetails = project.images && project.images.length === 3; // ARBORİS gibi 3 görseli olanlar
+  const detailImages = hasSideBySideDetails ? [project.images[1], project.images[2]] : [];
 
   return (
     <motion.div
@@ -127,17 +138,35 @@ function ProjectCard({ project, categoryId }) {
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Görsel */}
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={currentImage}
-          className={styles.cardImage}
-          style={{ backgroundImage: `url(${currentImage})` }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
-        />
-      </AnimatePresence>
+      {isHovered && hasSideBySideDetails ? (
+        // 3 görseli olan projeler için yan yana layout (ARBORİS)
+        <div className={styles.sideBySideImages}>
+          {detailImages.map((img, idx) => (
+            <motion.div
+              key={img}
+              className={styles.sideBySideImage}
+              style={{ backgroundImage: `url(${img})` }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.3, delay: idx * 0.1 }}
+            />
+          ))}
+        </div>
+      ) : (
+        // Normal görsel (kapak veya tek detay)
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={isHovered && hasMultipleImages ? detailImage : coverImage}
+            className={styles.cardImage}
+            style={{ backgroundImage: `url(${isHovered && hasMultipleImages ? detailImage : coverImage})` }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          />
+        </AnimatePresence>
+      )}
 
       {/* Hover Overlay */}
       <AnimatePresence>
