@@ -1,0 +1,267 @@
+.projects {
+  min-height: 100vh;
+  padding: var(--spacing-3xl) var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Bölüm Başlığı */
+.sectionTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: var(--font-size-3xl);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-align: center;
+  margin-bottom: var(--spacing-3xl);
+  padding: var(--spacing-md) var(--spacing-2xl);
+  border: 1px solid var(--color-glass-border);
+  border-radius: var(--radius-full);
+  background: var(--color-glass-bg);
+}
+
+/* Kategori Listesi */
+.categoriesList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3xl);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Kategori Bölümü */
+.categorySection {
+  width: 100%;
+}
+
+/* Slider Container */
+.sliderContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  position: relative;
+}
+
+.swiperWrapper {
+  flex: 1;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.swiper {
+  width: 100%;
+}
+
+.slide {
+  height: auto;
+}
+
+/* Navigation Butonları */
+.navButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  color: var(--color-text-secondary);
+  background: var(--color-glass-bg);
+  border: 1px solid var(--color-glass-border);
+  border-radius: 50%;
+  transition: all var(--transition-normal);
+  flex-shrink: 0;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.navButton:hover {
+  color: var(--color-text-primary);
+  background: var(--color-glass-bg-hover);
+  border-color: var(--color-accent);
+  transform: scale(1.1);
+}
+
+/* Proje Kartı */
+.card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: var(--color-bg-secondary);
+  cursor: pointer;
+}
+
+.cardImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Hover Overlay */
+.cardOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 31, 24, 0.2) 0%,
+    rgba(10, 31, 24, 0.5) 50%,
+    rgba(10, 31, 24, 0.95) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: var(--spacing-xl);
+}
+
+.overlayContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.overlayCategory {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.overlayTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.overlayDescription {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-normal);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-top: var(--spacing-xs);
+}
+
+/* Proje Bilgisi - Kartın Altında */
+.projectInfo {
+  text-align: center;
+  padding: var(--spacing-lg) 0;
+}
+
+.projectCategory {
+  display: block;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.projectTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Responsive - Tablet */
+@media (max-width: 1024px) {
+  .projects {
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+
+  .swiperWrapper {
+    max-width: 700px;
+  }
+
+  .navButton {
+    width: 57px;
+    height: 57px;
+  }
+}
+
+/* Responsive - Mobil */
+@media (max-width: 768px) {
+  .projects {
+    padding: var(--spacing-xl) var(--spacing-sm);
+  }
+
+  .sliderContainer {
+    gap: var(--spacing-sm);
+  }
+
+  .swiperWrapper {
+    max-width: 100%;
+  }
+
+  .navButton {
+    width: 52px;
+    height: 52px;
+  }
+
+  .card {
+    border-radius: var(--radius-lg);
+  }
+
+  .cardOverlay {
+    padding: var(--spacing-md);
+  }
+
+  .overlayTitle {
+    font-size: var(--font-size-lg);
+  }
+
+  .overlayDescription {
+    -webkit-line-clamp: 2;
+    font-size: var(--font-size-xs);
+  }
+
+  .projectTitle {
+    font-size: var(--font-size-lg);
+  }
+}
+
+/* Responsive - Küçük Mobil */
+@media (max-width: 480px) {
+  .projects {
+    padding: var(--spacing-lg) var(--spacing-xs);
+  }
+
+  .navButton {
+    width: 47px;
+    height: 47px;
+  }
+
+  .card {
+    aspect-ratio: 1 / 1;
+  }
+
+  .overlayDescription {
+    display: none;
+  }
+
+  .projectInfo {
+    padding: var(--spacing-md) 0;
+  }
+
+  .projectTitle {
+    font-size: var(--font-size-md);
+  }
+}

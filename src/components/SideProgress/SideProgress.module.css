@@ -1,0 +1,69 @@
+.sideProgress {
+  position: fixed;
+  left: var(--spacing-lg);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: var(--z-fixed);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Indicators */
+.indicators {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+.indicator {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-normal);
+}
+
+.indicatorDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-glass-bg);
+  border: 2px solid var(--color-glass-border);
+  transition: all var(--transition-normal);
+}
+
+.indicator:hover .indicatorDot {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  transform: scale(1.3);
+}
+
+.indicator.active .indicatorDot {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  width: 12px;
+  height: 12px;
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .sideProgress {
+    left: var(--spacing-sm);
+  }
+}
+
+@media (max-width: 768px) {
+  .sideProgress {
+    display: none;
+  }
+}
+

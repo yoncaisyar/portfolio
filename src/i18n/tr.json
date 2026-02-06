@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "about": "Hakkımda",
+    "projects": "Projeler",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "badge": "GRAFİK TASARIMCI",
+    "greeting": "Merhaba, Ben",
+    "name": "Yonca İŞYAR",
+    "description": "Ben Yonca İşyar, 24 yaşındayım. Çukurova Üniversitesi Güzel Sanatlar Fakültesi Grafik Tasarım Bölümü son sınıf öğrencisiyim (Tek ders kaldı). Tasarımda yenilikleri yakından takip etmeyi, kendimi sürekli geliştirmeyi ve farklı bakış açılarıyla öğrenmeye açık olmayı önemsiyorum. Yeni deneyimlere açık bir tasarımcı olarak, yaratıcı süreçlerde aktif rol almayı ve her projede kendime bir şeyler katmayı hedefliyorum.",
+    "detailButton": "Detay"
+  },
+  "projects": {
+    "title": "Projeler",
+    "viewProject": "Projeyi Görüntüle",
+    "categories": {
+      "logo-tasarimi": {
+        "title": "Logo Tasarımı",
+        "projects": {
+          "arboris": {
+            "title": "Arboris",
+            "subtitle": "Ulusal Mobilya Firması",
+            "description": "Arboris logosunun amblemi, parmak izi ile ağaç köklerini birleştiren eşsiz bir tasarımdır. Parmak İzi: Markanın benzersizliğini ve her alanda iz bırakma hedefini temsil eder. Ağaç Kökleri: Markanın köklü yapısını ve sürdürülebilirlik anlayışını yansıtır. Bu güçlü sembol, hem markanın eşsizliğini hem de köklü ve sağlam duruşunu görsel olarak ifade eder."
+          },
+          "selcuk": {
+            "title": "Selçuk Ecza Deposu",
+            "subtitle": "Kurumsal Kimlik",
+            "description": "\"Selçuk Ecza Deposu\" için yeniden tasarlanan bu logo, sağlık sektörünün güven ve otoritesini modern bir dille yansıtıyor. Tasarım, eczacılığın evrensel simgesi olan asaya sarılı yılan figürünü, geleneksel Selçuklu motiflerini çağrıştıran geometrik bir yıldız formunun içine yerleştiriyor. Bu minimal ve anlamlı tasarım, kurumun köklü geçmişi ile modern hizmet anlayışını birleştiriyor."
+          },
+          "wush": {
+            "title": "Wush Wush Coffee",
+            "subtitle": "Kahve Dükkanı",
+            "description": "Wush Wush Coffee Shop için yeniden tasarlanan bu logo, dükkanın baş harfi olan \"W\"yi, kahve kupası formuyla ustaca birleştirir. Koyu kahverengi ile krem tonlarının kullanıldığı merkezdeki akışkan ve dalgalı \"W\" formu, sadece kahve buharını değil, aynı zamanda Wush Wush kahvesinin yetiştiği yüksek rakımlı dağlık alanların soyut bir temsili olarak da işlev görür."
+          }
+        }
+      }
+    },
+    "items": {
+      "dior": {
+        "title": "DIOR Afiş Kampanyası",
+        "description": "Bu afiş kampanyası, Dior markasının yeni gözlük koleksiyonunu tanıtmak amacıyla, \"PARIS O KADAR YAKINDA\" sloganıyla lüks ve ulaşılabilir bir rüyayı birleştiriyor. Kampanya, gözlükleri sadece bir moda aksesuarı olarak değil, takan kişiye Paris'in zarafetini, cazibesini ve stilini bir bakış uzaklığına getiren bir portal olarak konumlandırıyor."
+      },
+      "branding": {
+        "title": "Marka Kimlik Tasarımı",
+        "description": "Kurumsal kimlik ve marka tasarım projesi. Logo, renk paleti ve görsel dil oluşturma."
+      },
+      "packaging": {
+        "title": "Ambalaj Tasarımı",
+        "description": "Ürün ambalaj tasarımları ve paketleme çözümleri."
+      },
+      "socialmedia": {
+        "title": "Sosyal Medya Tasarımları",
+        "description": "Instagram, Facebook ve diğer platformlar için görsel içerik tasarımları."
+      },
+      "illustration": {
+        "title": "İllüstrasyon Çalışmaları",
+        "description": "Dijital ve geleneksel illüstrasyon projeleri."
+      },
+      "editorial": {
+        "title": "Editöryal Tasarım",
+        "description": "Dergi, kitap ve broşür tasarımları."
+      }
+    }
+  },
+  "contact": {
+    "title": "Fikirlerinizi çarpıcı tasarımlara dönüştürmek için birlikte çalışalım",
+    "cta": "Hire Me Now",
+    "email": "E-posta",
+    "phone": "Telefon"
+  },
+  "footer": {
+    "brand": "Yoncisyar",
+    "copyright": "© 2025 - Yonca İşyar Tüm hakları saklıdır"
+  }
+}
+

@@ -1,0 +1,14 @@
+<svg width="400" height="500" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="200" cy="250" r="150" fill="rgba(74, 222, 128, 0.1)"/>
+  
+  <!-- Silhouette placeholder -->
+  <ellipse cx="200" cy="180" rx="60" ry="70" fill="rgba(255, 255, 255, 0.2)"/>
+  <path d="M120 350 C120 280, 150 240, 200 240 C250 240, 280 280, 280 350 L280 500 L120 500 Z" fill="rgba(255, 255, 255, 0.15)"/>
+  
+  <!-- Text hint -->
+  <text x="200" y="420" text-anchor="middle" fill="rgba(255, 255, 255, 0.4)" font-family="Inter, sans-serif" font-size="14">
+    Görselinizi buraya ekleyin
+  </text>
+</svg>
+
