@@ -64,6 +64,16 @@
             "description": "In this billboard design I prepared for Selçuk Pharmacy Warehouse, I highlighted the brand's themes of trust and health. The slogan \"Your Health is Guaranteed with Every Baggage\" is supported by the baggage tag and medical bag composition in the visual, conveying the brand's reliable service approach with a strong visual message."
           }
         }
+      },
+      "ambalaj-tasarimi": {
+        "title": "Packaging Design",
+        "projects": {
+          "johnsons-baby": {
+            "title": "Johnsons Baby",
+            "subtitle": "Baby Products",
+            "description": "This packaging series designed for Johnsons Baby brand reflects the soft and trustworthy nature of baby products with cute penguin characters and a pastel color palette. Specially designed penguin characters for each product visually express the product's features while aiming to gain parents' trust."
+          }
+        }
       }
     },
     "items": {

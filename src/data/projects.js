@@ -96,6 +96,26 @@ export const categories = [
         ]
       }
     ]
+  },
+  {
+    id: 'ambalaj-tasarimi',
+    title: 'Ambalaj Tasarımı',
+    projects: [
+      {
+        id: 'johnsons-baby',
+        title: 'Johnsons Baby',
+        subtitle: 'Bebek Ürünleri',
+        description: 'Johnsons Baby markası için tasarlanan bu ambalaj serisi, sevimli penguen karakterleri ve pastel renk paletiyle bebek ürünlerinin yumuşak ve güvenilir doğasını yansıtıyor. Her ürün için özel tasarlanmış penguen karakterleri, ürünün özelliklerini görsel olarak ifade ederken, ebeveynlerin güvenini kazanmayı hedefliyor.',
+        images: [
+          `${baseUrl}projects/ambalaj_tasarimi/johnson1.jpeg`,
+          `${baseUrl}projects/ambalaj_tasarimi/johnson2.jpeg`,
+          `${baseUrl}projects/ambalaj_tasarimi/johnson3.jpeg`,
+          `${baseUrl}projects/ambalaj_tasarimi/johnson4.jpeg`,
+          `${baseUrl}projects/ambalaj_tasarimi/johnson5.jpeg`,
+          `${baseUrl}projects/ambalaj_tasarimi/johnson6.jpeg`
+        ]
+      }
+    ]
   }
   // Diğer kategoriler buraya eklenecek
 ];

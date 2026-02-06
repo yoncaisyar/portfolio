@@ -64,6 +64,16 @@
             "description": "Selçuk Ecza Deposu için hazırladığım bu billboard tasarımında, markanın güven ve sağlık temalarını öne çıkardım. \"Her Bagajla Sağlığınız Güvence Altında\" sloganı, görselde yer alan bagaj bandı ve medikal çanta kompozisyonuyla desteklenerek, markanın güvenilir hizmet anlayışını güçlü bir görsel mesajla aktarmaktadır."
           }
         }
+      },
+      "ambalaj-tasarimi": {
+        "title": "Ambalaj Tasarımı",
+        "projects": {
+          "johnsons-baby": {
+            "title": "Johnsons Baby",
+            "subtitle": "Bebek Ürünleri",
+            "description": "Johnsons Baby markası için tasarlanan bu ambalaj serisi, sevimli penguen karakterleri ve pastel renk paletiyle bebek ürünlerinin yumuşak ve güvenilir doğasını yansıtıyor. Her ürün için özel tasarlanmış penguen karakterleri, ürünün özelliklerini görsel olarak ifade ederken, ebeveynlerin güvenini kazanmayı hedefliyor."
+          }
+        }
       }
     },
     "items": {
