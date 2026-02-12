@@ -74,6 +74,16 @@
             "description": "Johnsons Baby markası için tasarlanan bu ambalaj serisi, sevimli penguen karakterleri ve pastel renk paletiyle bebek ürünlerinin yumuşak ve güvenilir doğasını yansıtıyor. Her ürün için özel tasarlanmış penguen karakterleri, ürünün özelliklerini görsel olarak ifade ederken, ebeveynlerin güvenini kazanmayı hedefliyor."
           }
         }
+      },
+      "cocuk-kitabi-tasarimi": {
+        "title": "Çocuk Kitabı Tasarımı",
+        "projects": {
+          "kitap-tasarim": {
+            "title": "Kitap Tasarımı",
+            "subtitle": "Kitap Tasarım",
+            "description": "Bu çalışma, çocuk kitapları için hazırladığım, hem hikayesini yazdığım hem de tüm sayfalarının illüstrasyonlarını bizzat tasarladığım tamamen özgün bir projedir. Hikaye, bir denizci ve küçük bir kızın deniz kenarındaki keyifli balık avı macerasına odaklanırken; canlı ve neşeli çizimlerimle metnin ruhunu görselleştirmeyi amaçladım. Metin ve görsellerin uyum içinde olduğu, bütünsel bir eserdir."
+          }
+        }
       }
     },
     "items": {

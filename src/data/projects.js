@@ -116,6 +116,22 @@ export const categories = [
         ]
       }
     ]
+  },
+  {
+    id: 'cocuk-kitabi-tasarimi',
+    title: 'Çocuk Kitabı Tasarımı',
+    projects: [
+      {
+        id: 'kitap-tasarim',
+        title: 'Kitap Tasarımı',
+        subtitle: 'Kitap Tasarım',
+        description: 'Bu çalışma, çocuk kitapları için hazırladığım, hem hikayesini yazdığım hem de tüm sayfalarının illüstrasyonlarını bizzat tasarladığım tamamen özgün bir projedir. Hikaye, bir denizci ve küçük bir kızın deniz kenarındaki keyifli balık avı macerasına odaklanırken; canlı ve neşeli çizimlerimle metnin ruhunu görselleştirmeyi amaçladım. Metin ve görsellerin uyum içinde olduğu, bütünsel bir eserdir.',
+        images: [
+          `${baseUrl}projects/cocuk_kitabi_tasarimi/cocuk1.jpeg`,
+          `${baseUrl}projects/cocuk_kitabi_tasarimi/cocuk2.jpeg`
+        ]
+      }
+    ]
   }
   // Diğer kategoriler buraya eklenecek
 ];

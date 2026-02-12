@@ -74,6 +74,16 @@
             "description": "This packaging series designed for Johnsons Baby brand reflects the soft and trustworthy nature of baby products with cute penguin characters and a pastel color palette. Specially designed penguin characters for each product visually express the product's features while aiming to gain parents' trust."
           }
         }
+      },
+      "cocuk-kitabi-tasarimi": {
+        "title": "Children's Book Design",
+        "projects": {
+          "kitap-tasarim": {
+            "title": "Book Design",
+            "subtitle": "Book Design",
+            "description": "This work is a completely original project I prepared for children's books, where I both wrote the story and personally designed all the illustrations for every page. The story focuses on a sailor and a little girl's delightful fishing adventure by the sea; I aimed to visualize the spirit of the text with my vibrant and cheerful drawings. It is a holistic work where text and visuals are in harmony."
+          }
+        }
       }
     },
     "items": {
