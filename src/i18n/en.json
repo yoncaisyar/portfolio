@@ -9,11 +9,15 @@
     "greeting": "Hello, I'm",
     "name": "Yonca İŞYAR",
     "description": "I'm Yonca Isyar, 24 years old. I'm a senior student at Çukurova University, Faculty of Fine Arts, Department of Graphic Design (one course left). I value following innovations in design, constantly improving myself, and being open to learning with different perspectives. As a designer open to new experiences, I aim to take an active role in creative processes and add something to myself in every project.",
-    "detailButton": "Details"
+    "viewCV": "View CV",
+    "downloadCV": "Download CV"
   },
   "projects": {
     "title": "Projects",
     "viewProject": "View Project",
+    "categoryMenu": {
+      "selectCategory": "Select Category"
+    },
     "categories": {
       "logo-tasarimi": {
         "title": "Logo Design",
@@ -82,6 +86,26 @@
             "title": "Book Design",
             "subtitle": "Book Design",
             "description": "This work is a completely original project I prepared for children's books, where I both wrote the story and personally designed all the illustrations for every page. The story focuses on a sailor and a little girl's delightful fishing adventure by the sea; I aimed to visualize the spirit of the text with my vibrant and cheerful drawings. It is a holistic work where text and visuals are in harmony."
+          }
+        }
+      },
+      "illustrasyon-tasarimi": {
+        "title": "Illustration Design",
+        "projects": {
+          "anatomik-bilimsel-illustrasyon": {
+            "title": "Anatomical and Scientific Illustration",
+            "subtitle": "",
+            "description": ""
+          },
+          "radyo-mimik": {
+            "title": "Radio Mimic Work",
+            "subtitle": "",
+            "description": ""
+          },
+          "karakter-illustrasyon": {
+            "title": "Character and Illustration Work",
+            "subtitle": "",
+            "description": ""
           }
         }
       }

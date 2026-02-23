@@ -1,16 +1,15 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
+// https://vitejs.dev/config/
 export default defineConfig({
-  base: '/portfolio/',
   plugins: [react()],
-  server: {
-    host: true,
-    port: 5173,
-    strictPort: false,
-    hmr: {
-      overlay: true
+  optimizeDeps: {
+    include: ['i18next', 'react-i18next']
+  },
+  build: {
+    commonjsOptions: {
+      include: [/i18next/, /react-i18next/, /node_modules/]
     }
   }
 })

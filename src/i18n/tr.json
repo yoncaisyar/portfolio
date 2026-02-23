@@ -9,11 +9,15 @@
     "greeting": "Merhaba, Ben",
     "name": "Yonca İŞYAR",
     "description": "Ben Yonca İşyar, 24 yaşındayım. Çukurova Üniversitesi Güzel Sanatlar Fakültesi Grafik Tasarım Bölümü son sınıf öğrencisiyim (Tek ders kaldı). Tasarımda yenilikleri yakından takip etmeyi, kendimi sürekli geliştirmeyi ve farklı bakış açılarıyla öğrenmeye açık olmayı önemsiyorum. Yeni deneyimlere açık bir tasarımcı olarak, yaratıcı süreçlerde aktif rol almayı ve her projede kendime bir şeyler katmayı hedefliyorum.",
-    "detailButton": "Detay"
+    "viewCV": "CV Görüntüle",
+    "downloadCV": "CV İndir"
   },
   "projects": {
     "title": "Projeler",
     "viewProject": "Projeyi Görüntüle",
+    "categoryMenu": {
+      "selectCategory": "Kategori Seçin"
+    },
     "categories": {
       "logo-tasarimi": {
         "title": "Logo Tasarımı",
@@ -82,6 +86,26 @@
             "title": "Kitap Tasarımı",
             "subtitle": "Kitap Tasarım",
             "description": "Bu çalışma, çocuk kitapları için hazırladığım, hem hikayesini yazdığım hem de tüm sayfalarının illüstrasyonlarını bizzat tasarladığım tamamen özgün bir projedir. Hikaye, bir denizci ve küçük bir kızın deniz kenarındaki keyifli balık avı macerasına odaklanırken; canlı ve neşeli çizimlerimle metnin ruhunu görselleştirmeyi amaçladım. Metin ve görsellerin uyum içinde olduğu, bütünsel bir eserdir."
+          }
+        }
+      },
+      "illustrasyon-tasarimi": {
+        "title": "İllüstrasyon Tasarımı",
+        "projects": {
+          "anatomik-bilimsel-illustrasyon": {
+            "title": "Anatomik ve bilimsel illüstrasyon",
+            "subtitle": "",
+            "description": ""
+          },
+          "radyo-mimik": {
+            "title": "Radyo Mimik Çalışması",
+            "subtitle": "",
+            "description": ""
+          },
+          "karakter-illustrasyon": {
+            "title": "Karakter ve illüstrasyon Çalışması",
+            "subtitle": "",
+            "description": ""
           }
         }
       }

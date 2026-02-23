@@ -32,12 +32,12 @@ export default function Footer() {
     },
     { 
       icon: Mail, 
-      href: 'mailto:yoncaisyar@email.com', 
+      href: 'mailto:yoncaisyar2001@gmail.com', 
       label: 'Email' 
     },
     { 
       icon: Phone, 
-      href: 'tel:+905551234567', 
+      href: 'tel:+905449294162', 
       label: 'Phone' 
     }
   ];

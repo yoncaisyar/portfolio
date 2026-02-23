@@ -53,6 +53,20 @@
   background: var(--color-glass-bg-hover);
 }
 
+.navItem.hasDropdown {
+  position: relative;
+}
+
+/* Projects Nav Wrapper for Dropdown */
+.projectsNavWrapper {
+  position: relative;
+}
+
+.projectsNavWrapper:hover .navItem {
+  color: var(--color-text-primary);
+  background: var(--color-glass-bg-hover);
+}
+
 
 /* Mobile Menu Button */
 .mobileMenuBtn {
@@ -139,6 +153,11 @@
 .mobileNavItem.active {
   color: var(--color-text-primary);
   background: var(--color-glass-bg-hover);
+}
+
+.mobileProjectsWrapper {
+  position: relative;
+  width: 100%;
 }
 
 .mobileControls {

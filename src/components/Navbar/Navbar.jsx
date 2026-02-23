@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useScrollSection } from '../../hooks/useScrollSection';
+import CategoryMenu from '../Projects/CategoryMenu';
 import styles from './Navbar.module.css';
 
 const sectionIds = ['hero', 'projects', 'contact'];
@@ -12,6 +13,9 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isScrolledDown, setIsScrolledDown] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isProjectsMenuOpen, setIsProjectsMenuOpen] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const projectsButtonRef = useRef(null);
   const lastScrollY = useRef(0);
 
   useEffect(() => {
@@ -48,6 +52,33 @@ export default function Navbar() {
     { id: 'contact', label: t('nav.contact') }
   ];
 
+  const handleProjectsClick = () => {
+    scrollToSection('projects');
+    // Mobile'da tıklama ile menüyü aç/kapat
+    if (window.innerWidth <= 768) {
+      setIsProjectsMenuOpen(!isProjectsMenuOpen);
+    }
+  };
+
+  const handleProjectsMouseEnter = () => {
+    // Desktop'ta hover ile menüyü aç
+    if (window.innerWidth > 768) {
+      setIsProjectsMenuOpen(true);
+    }
+  };
+
+  const handleProjectsMouseLeave = () => {
+    // Desktop'ta hover ile menüyü kapat
+    if (window.innerWidth > 768) {
+      setIsProjectsMenuOpen(false);
+    }
+  };
+
+  const handleCategorySelect = (categoryId) => {
+    setSelectedCategory(categoryId);
+    scrollToSection('projects');
+  };
+
   return (
     <motion.nav
       className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''} ${isScrolledDown ? styles.hidden : ''}`}
@@ -61,15 +92,42 @@ export default function Navbar() {
       <div className={styles.container}>
         {/* Desktop Navigation */}
         <div className={styles.navPill}>
-          {navItems.map((item) => (
-            <button
-              key={item.id}
-              className={`${styles.navItem} ${activeSection === item.id ? styles.active : ''}`}
-              onClick={() => scrollToSection(item.id)}
-            >
-              {item.label}
-            </button>
-          ))}
+          {navItems.map((item) => {
+            if (item.id === 'projects') {
+              return (
+                <div
+                  key={item.id}
+                  className={styles.projectsNavWrapper}
+                  onMouseEnter={handleProjectsMouseEnter}
+                  onMouseLeave={handleProjectsMouseLeave}
+                >
+                  <button
+                    ref={projectsButtonRef}
+                    className={`${styles.navItem} ${activeSection === item.id ? styles.active : ''} ${isProjectsMenuOpen ? styles.hasDropdown : ''}`}
+                    onClick={handleProjectsClick}
+                  >
+                    {item.label}
+                  </button>
+                  <CategoryMenu
+                    isOpen={isProjectsMenuOpen}
+                    onClose={() => setIsProjectsMenuOpen(false)}
+                    triggerRef={projectsButtonRef}
+                    selectedCategory={selectedCategory}
+                    onCategorySelect={handleCategorySelect}
+                  />
+                </div>
+              );
+            }
+            return (
+              <button
+                key={item.id}
+                className={`${styles.navItem} ${activeSection === item.id ? styles.active : ''}`}
+                onClick={() => scrollToSection(item.id)}
+              >
+                {item.label}
+              </button>
+            );
+          })}
         </div>
 
 
@@ -93,18 +151,42 @@ export default function Navbar() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
           >
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                className={`${styles.mobileNavItem} ${activeSection === item.id ? styles.active : ''}`}
-                onClick={() => {
-                  scrollToSection(item.id);
-                  setIsMobileMenuOpen(false);
-                }}
-              >
-                {item.label}
-              </button>
-            ))}
+            {navItems.map((item) => {
+              if (item.id === 'projects') {
+                return (
+                  <div key={item.id} className={styles.mobileProjectsWrapper}>
+                    <button
+                      className={`${styles.mobileNavItem} ${activeSection === item.id ? styles.active : ''}`}
+                      onClick={() => {
+                        scrollToSection(item.id);
+                        setIsProjectsMenuOpen(!isProjectsMenuOpen);
+                      }}
+                    >
+                      {item.label}
+                    </button>
+                    <CategoryMenu
+                      isOpen={isProjectsMenuOpen}
+                      onClose={() => setIsProjectsMenuOpen(false)}
+                      triggerRef={null}
+                      selectedCategory={selectedCategory}
+                      onCategorySelect={handleCategorySelect}
+                    />
+                  </div>
+                );
+              }
+              return (
+                <button
+                  key={item.id}
+                  className={`${styles.mobileNavItem} ${activeSection === item.id ? styles.active : ''}`}
+                  onClick={() => {
+                    scrollToSection(item.id);
+                    setIsMobileMenuOpen(false);
+                  }}
+                >
+                  {item.label}
+                </button>
+              );
+            })}
           </motion.div>
         )}
       </AnimatePresence>

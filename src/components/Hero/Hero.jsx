@@ -1,17 +1,27 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, FileText, Download } from 'lucide-react';
 import styles from './Hero.module.css';
 
 // Yonca's illustration - loaded from public folder for better performance
 const baseUrl = import.meta.env.BASE_URL;
 const heroImage = `${baseUrl}yonca-profil.png`;
+const cvPdfUrl = `${baseUrl}malisevdinoglu.pdf`;
 
 export default function Hero() {
   const { t } = useTranslation();
 
-  const scrollToProjects = () => {
-    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+  const handleViewCV = () => {
+    window.open(cvPdfUrl, '_blank');
+  };
+
+  const handleDownloadCV = () => {
+    const link = document.createElement('a');
+    link.href = cvPdfUrl;
+    link.download = 'malisevdinoglu.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const containerVariants = {
@@ -67,16 +77,27 @@ export default function Hero() {
             {t('hero.description')}
           </motion.p>
           
-          <motion.button
-            className={styles.detailButton}
-            variants={itemVariants}
-            onClick={scrollToProjects}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            {t('hero.detailButton')}
-            <ArrowDown size={16} />
-          </motion.button>
+          <motion.div className={styles.cvButtonGroup} variants={itemVariants}>
+            <motion.button
+              className={styles.cvButton}
+              onClick={handleViewCV}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <FileText size={16} />
+              {t('hero.viewCV')}
+            </motion.button>
+            
+            <motion.button
+              className={styles.cvButton}
+              onClick={handleDownloadCV}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <Download size={16} />
+              {t('hero.downloadCV')}
+            </motion.button>
+          </motion.div>
         </motion.div>
 
         <motion.div

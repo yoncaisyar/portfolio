@@ -50,7 +50,7 @@ function CategorySlider({ category }) {
   const activeProject = category.projects[activeIndex];
 
   return (
-    <div className={styles.categorySection}>
+    <div id={category.id} className={styles.categorySection}>
       {/* Kategori Başlığı */}
       <motion.h3
         className={styles.categoryTitle}
@@ -171,10 +171,12 @@ function ProjectCard({ project, categoryId }) {
         </AnimatePresence>
       )}
 
-      {/* Proje Başlığı - Görsel Altında Gölgeli Overlay */}
-      <div className={styles.titleOverlay}>
-        <h3 className={styles.cardTitle}>{t(`projects.categories.${categoryId}.projects.${project.id}.title`)}</h3>
-      </div>
+      {/* Proje Başlığı - Görsel Altında Gölgeli Overlay (sadece hover kapalıyken) */}
+      {!isHovered && (
+        <div className={styles.titleOverlay}>
+          <h3 className={styles.cardTitle}>{t(`projects.categories.${categoryId}.projects.${project.id}.title`)}</h3>
+        </div>
+      )}
 
       {/* Hover Overlay */}
       <AnimatePresence>
@@ -187,7 +189,7 @@ function ProjectCard({ project, categoryId }) {
             transition={{ duration: 0.3 }}
           >
             <div className={styles.overlayContent}>
-              <h4 className={styles.overlayTitle}>{t(`projects.categories.${categoryId}.projects.${project.id}.title`)}</h4>
+              <h3 className={styles.overlayTitle}>{t(`projects.categories.${categoryId}.projects.${project.id}.title`)}</h3>
               <p className={styles.overlayDescription}>{t(`projects.categories.${categoryId}.projects.${project.id}.description`)}</p>
             </div>
           </motion.div>

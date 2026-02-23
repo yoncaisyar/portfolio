@@ -36,6 +36,7 @@
 /* Kategori Bölümü */
 .categorySection {
   width: 100%;
+  scroll-margin-top: var(--spacing-xl);
 }
 
 /* Kategori Başlığı */

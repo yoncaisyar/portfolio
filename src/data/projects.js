@@ -132,6 +132,41 @@ export const categories = [
         ]
       }
     ]
+  },
+  {
+    id: 'illustrasyon-tasarimi',
+    title: 'İllüstrasyon Tasarımı',
+    projects: [
+      {
+        id: 'anatomik-bilimsel-illustrasyon',
+        title: 'Anatomik ve bilimsel illüstrasyon',
+        subtitle: '',
+        description: '',
+        images: [
+          `${baseUrl}projects/illustrasyon/yarasa1.jpeg`,
+          `${baseUrl}projects/illustrasyon/yarasa2.jpeg`
+        ]
+      },
+      {
+        id: 'radyo-mimik',
+        title: 'Radyo Mimik Çalışması',
+        subtitle: '',
+        description: '',
+        images: [
+          `${baseUrl}projects/illustrasyon/radyo1.jpeg`,
+          `${baseUrl}projects/illustrasyon/radyo2.jpeg`
+        ]
+      },
+      {
+        id: 'karakter-illustrasyon',
+        title: 'Karakter ve illüstrasyon Çalışması',
+        subtitle: '',
+        description: '',
+        images: [
+          `${baseUrl}projects/illustrasyon/pamukprenses1.jpeg`,
+          `${baseUrl}projects/illustrasyon/pamukprenses2.jpeg`
+        ]
+      }
+    ]
   }
-  // Diğer kategoriler buraya eklenecek
 ];
