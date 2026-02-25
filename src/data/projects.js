@@ -168,5 +168,165 @@ export const categories = [
         ]
       }
     ]
+  },
+  {
+    id: 'kurumsal-kimlik',
+    title: 'Kurumsal Kimlik',
+    projects: [
+      {
+        id: 'arboris-kurumsal',
+        title: 'Arboris',
+        subtitle: '',
+        description: '',
+        images: [
+          `${baseUrl}projects/kurumsal_kimlik/Arboris1.jpeg`,
+          `${baseUrl}projects/kurumsal_kimlik/Arboris1.jpeg`
+        ]
+      },
+      {
+        id: 'selcuk-ecza-kurumsal',
+        title: 'Selçuk Ecza',
+        subtitle: '',
+        description: '',
+        images: [
+          `${baseUrl}projects/kurumsal_kimlik/selcukecza1.jpeg`,
+          `${baseUrl}projects/kurumsal_kimlik/selcukecza2.jpg`
+        ]
+      }
+    ]
+  },
+  {
+    id: 'sosyal-medya',
+    title: 'Sosyal Medya',
+    projects: [
+      {
+        id: 'selcuk-ecza-sosyal',
+        title: 'Selçuk Ecza',
+        subtitle: '',
+        description: '',
+        images: [
+          `${baseUrl}projects/sosyal_medya/Selcukecza1.png`,
+          `${baseUrl}projects/sosyal_medya/Selçukecza2.jpg`
+        ]
+      },
+      {
+        id: 'arboris-sosyal',
+        title: 'Arboris',
+        subtitle: '',
+        description: '',
+        images: [
+          `${baseUrl}projects/sosyal_medya/Arboriss1.png`,
+          `${baseUrl}projects/sosyal_medya/Arboriss1.png`
+        ]
+      }
+    ]
+  },
+  {
+    id: 'dergi-tasarimi',
+    title: 'Dergi Tasarımı',
+    projects: [
+      {
+        id: 'sprint-spor-dergisi',
+        title: 'SPRINT Spor Dergisi',
+        subtitle: '',
+        description: '',
+        images: [
+          `${baseUrl}projects/dergi_tasarimi/sprint1.png`,
+          `${baseUrl}projects/dergi_tasarimi/sprint2.png`
+        ]
+      },
+      {
+        id: 'selcuk-ecza-dergi',
+        title: 'Selçuk Ecza',
+        subtitle: '',
+        description: '',
+        images: [
+          `${baseUrl}projects/dergi_tasarimi/selcukkecza1.png`,
+          `${baseUrl}projects/sosyal_medya/Selçukecza2.jpg`
+        ]
+      }
+    ]
+  },
+  {
+    id: 'uiux-design',
+    title: 'UI/UX DESIGN',
+    projects: [
+      {
+        id: 'yemek-arkadasi-uygulama',
+        title: 'Diyet Tercihlerine Uyumlu Yemek Arkadaşı uygulama tasarımı',
+        subtitle: '',
+        description: '',
+        images: [
+          `${baseUrl}projects/uiuxdesign/yemekuygulama1.png`,
+          `${baseUrl}projects/uiuxdesign/yemekuygulama1.png`
+        ]
+      }
+    ]
+  },
+  {
+    id: 'cesitli-tasarimlar',
+    title: 'Çeşitli Tasarımlar',
+    projects: [
+      {
+        id: 'kutu-oyunu-tasarimi',
+        title: 'Kutu Oyunu Tasarımı',
+        subtitle: '',
+        description: '',
+        images: [
+          `${baseUrl}projects/cesitli_tasarimlar/kutu oyunu1.png`,
+          `${baseUrl}projects/cesitli_tasarimlar/kutuoyunu2.png`
+        ]
+      },
+      {
+        id: 'brosur-tasarimi-1',
+        title: 'Broşür Tasarımı',
+        subtitle: '',
+        description: '',
+        images: [
+          `${baseUrl}projects/cesitli_tasarimlar/brosur1.png`,
+          `${baseUrl}projects/cesitli_tasarimlar/brosur2.png`
+        ]
+      },
+      {
+        id: 'brosur-tasarimi-2',
+        title: 'Broşür Tasarımı',
+        subtitle: '',
+        description: '',
+        images: [
+          `${baseUrl}projects/cesitli_tasarimlar/bbrosur1.png`,
+          `${baseUrl}projects/cesitli_tasarimlar/bbrosur2.png`
+        ]
+      },
+      {
+        id: 'bilgilendirme-infografik',
+        title: 'Bilgilendirme / İnografik Tasarım',
+        subtitle: '',
+        description: 'Bu görsel, küresel obezite sorununun 1990\'dan 2035\'e uzanan istatistiklerini, 1 milyar yetişkin ve 340 milyon çocuk obez gibi çarpıcı verilerle, modern ve bilgilendirici bir infografik tasarımıyla sunmaktadır.',
+        images: [
+          `${baseUrl}projects/cesitli_tasarimlar/bilgilendirme1.png`,
+          `${baseUrl}projects/cesitli_tasarimlar/bilgilendirme1.png`
+        ]
+      },
+      {
+        id: 'menu-tasarimi',
+        title: 'Menü Tasarımı',
+        subtitle: '',
+        description: 'Parm and Cheese restoranının mevcut menüsü görsel açıdan yetersiz bulunarak analiz edilmiş ve iyileştirme ihtiyacı tespit edilmiştir. Müşteri deneyimini zenginleştirmek amacıyla yapılan yeni menü tasarımında, her makarna çeşidine yüksek çözünürlüklü görseller eklenerek görsel zenginlik artırılmıştır. Ayrıca, menüdeki seçeneklerin kolayca işaretlenmesini sağlayan kullanıcı dostu bir mekanizma geliştirilerek seçim süreci hızlandırılmış ve etkileşimli hale getirilmiştir. Menü düzeninde her ürünün altına kısa açıklama ve fiyat bilgileri eklenmiş, son olarak tasarımda kullanılan renk ve yazı tipleri Parm and Cheese\'in marka kimliğini yansıtacak şekilde özenle seçilmiştir.',
+        images: [
+          `${baseUrl}projects/cesitli_tasarimlar/menu1.png`,
+          `${baseUrl}projects/cesitli_tasarimlar/menu1.png`
+        ]
+      },
+      {
+        id: 'masa-takvimi-tasarimi',
+        title: 'Masa Takvimi Tasarımı',
+        subtitle: '',
+        description: 'Fotoğrafçılık tutkunları ve estetik tasarım meraklıları için özel olarak tasarlanmış bu masa takvimi, sadece zamanı takip etmekle kalmaz, aynı zamanda günlük yaşama sanatsal bir dokunuş katmayı amaçlar. Kamera lensi konsepti, fotoğrafçılığın büyülü dünyasını masalara taşır. Bu özel tasarım masa takvimi, sadece estetik bir obje değil, aynı zamanda akıllı bir mekanizmaya sahip fonksiyonel bir araçtır. Kamera lensi şeklindeki bu takvim, kullanıcı dostu bir mekanizma ile donatılmıştır.',
+        images: [
+          `${baseUrl}projects/cesitli_tasarimlar/takvim1.png`,
+          `${baseUrl}projects/cesitli_tasarimlar/takvim1.png`
+        ]
+      }
+    ]
   }
 ];

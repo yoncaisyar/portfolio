@@ -1,51 +1,63 @@
+# Workflow adı: GitHub Actions arayüzünde görünen isim
 name: Deploy to GitHub Pages
 
+# Workflow ne zaman çalışacak?
 on:
   push:
     branches:
-      - main
-  workflow_dispatch:
+      - main   # main branch'e her push'ta otomatik çalışır
+  workflow_dispatch:   # GitHub Actions sayfasından manuel "Run workflow" ile de çalıştırılabilir
 
+# Bu workflow'un ihtiyaç duyduğu izinler
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: read      # Repo içeriğini okumak (kod çekmek) için
+  pages: write        # GitHub Pages'e yazmak (deploy) için
+  id-token: write     # GitHub Pages deployment için OIDC token üretmek için
 
+# Aynı anda birden fazla deploy çakışmasın diye
 concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  group: "pages"           # Aynı gruptaki işler sıraya alınır
+  cancel-in-progress: false  # Devam eden deploy iptal edilmez, sırada bekler
 
 jobs:
   deploy:
+    # GitHub Pages ortamı; deploy sonrası URL buradan gelir
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest   # Çalıştığı sanal makine: en güncel Ubuntu
+
     steps:
+      # 1. Repo kodunu workflow ortamına indir
       - name: Checkout
         uses: actions/checkout@v4
-      
+
+      # 2. Node.js kurulumu (build için gerekli)
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
-      
+          cache: 'npm'   # npm paketlerini cache'leyerek sonraki çalıştırmaları hızlandırır
+
+      # 3. package.json'daki bağımlılıkları yükle (ci = temiz, tutarlı kurulum)
       - name: Install dependencies
         run: npm ci
-      
+
+      # 4. Projeyi production build al (çıktı genelde dist/ klasörüne gider)
       - name: Build
         run: npm run build
-      
+
+      # 5. GitHub Pages deployment ortamını yapılandır
       - name: Setup Pages
         uses: actions/configure-pages@v4
-      
+
+      # 6. Build çıktısını (dist/) GitHub Pages'e verilecek artifact olarak yükle
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
-      
+          path: './dist'   # Vite/vue-cli vb. genelde build çıktısını buraya koyar
+
+      # 7. Yüklenen artifact'ı GitHub Pages'e deploy et; site canlıya alınır
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-

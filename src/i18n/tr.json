@@ -108,6 +108,96 @@
             "description": ""
           }
         }
+      },
+      "kurumsal-kimlik": {
+        "title": "Kurumsal Kimlik",
+        "projects": {
+          "arboris-kurumsal": {
+            "title": "Arboris",
+            "subtitle": "",
+            "description": ""
+          },
+          "selcuk-ecza-kurumsal": {
+            "title": "Selçuk Ecza",
+            "subtitle": "",
+            "description": ""
+          }
+        }
+      },
+      "sosyal-medya": {
+        "title": "Sosyal Medya",
+        "projects": {
+          "selcuk-ecza-sosyal": {
+            "title": "Selçuk Ecza",
+            "subtitle": "",
+            "description": ""
+          },
+          "arboris-sosyal": {
+            "title": "Arboris",
+            "subtitle": "",
+            "description": ""
+          }
+        }
+      },
+      "dergi-tasarimi": {
+        "title": "Dergi Tasarımı",
+        "projects": {
+          "sprint-spor-dergisi": {
+            "title": "SPRINT Spor Dergisi",
+            "subtitle": "",
+            "description": ""
+          },
+          "selcuk-ecza-dergi": {
+            "title": "Selçuk Ecza",
+            "subtitle": "",
+            "description": ""
+          }
+        }
+      },
+      "uiux-design": {
+        "title": "UI/UX DESIGN",
+        "projects": {
+          "yemek-arkadasi-uygulama": {
+            "title": "Diyet Tercihlerine Uyumlu Yemek Arkadaşı uygulama tasarımı",
+            "subtitle": "",
+            "description": ""
+          }
+        }
+      },
+      "cesitli-tasarimlar": {
+        "title": "Çeşitli Tasarımlar",
+        "projects": {
+          "kutu-oyunu-tasarimi": {
+            "title": "Kutu Oyunu Tasarımı",
+            "subtitle": "",
+            "description": ""
+          },
+          "brosur-tasarimi-1": {
+            "title": "Broşür Tasarımı",
+            "subtitle": "",
+            "description": ""
+          },
+          "brosur-tasarimi-2": {
+            "title": "Broşür Tasarımı",
+            "subtitle": "",
+            "description": ""
+          },
+          "bilgilendirme-infografik": {
+            "title": "Bilgilendirme / İnografik Tasarım",
+            "subtitle": "",
+            "description": "Bu görsel, küresel obezite sorununun 1990'dan 2035'e uzanan istatistiklerini, 1 milyar yetişkin ve 340 milyon çocuk obez gibi çarpıcı verilerle, modern ve bilgilendirici bir infografik tasarımıyla sunmaktadır."
+          },
+          "menu-tasarimi": {
+            "title": "Menü Tasarımı",
+            "subtitle": "",
+            "description": "Parm and Cheese restoranının mevcut menüsü görsel açıdan yetersiz bulunarak analiz edilmiş ve iyileştirme ihtiyacı tespit edilmiştir. Müşteri deneyimini zenginleştirmek amacıyla yapılan yeni menü tasarımında, her makarna çeşidine yüksek çözünürlüklü görseller eklenerek görsel zenginlik artırılmıştır. Ayrıca, menüdeki seçeneklerin kolayca işaretlenmesini sağlayan kullanıcı dostu bir mekanizma geliştirilerek seçim süreci hızlandırılmış ve etkileşimli hale getirilmiştir. Menü düzeninde her ürünün altına kısa açıklama ve fiyat bilgileri eklenmiş, son olarak tasarımda kullanılan renk ve yazı tipleri Parm and Cheese'in marka kimliğini yansıtacak şekilde özenle seçilmiştir."
+          },
+          "masa-takvimi-tasarimi": {
+            "title": "Masa Takvimi Tasarımı",
+            "subtitle": "",
+            "description": "Fotoğrafçılık tutkunları ve estetik tasarım meraklıları için özel olarak tasarlanmış bu masa takvimi, sadece zamanı takip etmekle kalmaz, aynı zamanda günlük yaşama sanatsal bir dokunuş katmayı amaçlar. Kamera lensi konsepti, fotoğrafçılığın büyülü dünyasını masalara taşır. Bu özel tasarım masa takvimi, sadece estetik bir obje değil, aynı zamanda akıllı bir mekanizmaya sahip fonksiyonel bir araçtır. Kamera lensi şeklindeki bu takvim, kullanıcı dostu bir mekanizma ile donatılmıştır."
+          }
+        }
       }
     },
     "items": {

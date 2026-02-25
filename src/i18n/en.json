@@ -108,6 +108,96 @@
             "description": ""
           }
         }
+      },
+      "kurumsal-kimlik": {
+        "title": "Corporate Identity",
+        "projects": {
+          "arboris-kurumsal": {
+            "title": "Arboris",
+            "subtitle": "",
+            "description": ""
+          },
+          "selcuk-ecza-kurumsal": {
+            "title": "Selçuk Ecza",
+            "subtitle": "",
+            "description": ""
+          }
+        }
+      },
+      "sosyal-medya": {
+        "title": "Social Media",
+        "projects": {
+          "selcuk-ecza-sosyal": {
+            "title": "Selçuk Ecza",
+            "subtitle": "",
+            "description": ""
+          },
+          "arboris-sosyal": {
+            "title": "Arboris",
+            "subtitle": "",
+            "description": ""
+          }
+        }
+      },
+      "dergi-tasarimi": {
+        "title": "Magazine Design",
+        "projects": {
+          "sprint-spor-dergisi": {
+            "title": "SPRINT Sports Magazine",
+            "subtitle": "",
+            "description": ""
+          },
+          "selcuk-ecza-dergi": {
+            "title": "Selçuk Ecza",
+            "subtitle": "",
+            "description": ""
+          }
+        }
+      },
+      "uiux-design": {
+        "title": "UI/UX DESIGN",
+        "projects": {
+          "yemek-arkadasi-uygulama": {
+            "title": "Diet-Friendly Meal Companion app design",
+            "subtitle": "",
+            "description": ""
+          }
+        }
+      },
+      "cesitli-tasarimlar": {
+        "title": "Miscellaneous Designs",
+        "projects": {
+          "kutu-oyunu-tasarimi": {
+            "title": "Board Game Design",
+            "subtitle": "",
+            "description": ""
+          },
+          "brosur-tasarimi-1": {
+            "title": "Brochure Design",
+            "subtitle": "",
+            "description": ""
+          },
+          "brosur-tasarimi-2": {
+            "title": "Brochure Design",
+            "subtitle": "",
+            "description": ""
+          },
+          "bilgilendirme-infografik": {
+            "title": "Informational / Infographic Design",
+            "subtitle": "",
+            "description": "This visual presents the statistics of the global obesity problem spanning from 1990 to 2035, with striking data such as 1 billion obese adults and 340 million obese children, through a modern and informative infographic design."
+          },
+          "menu-tasarimi": {
+            "title": "Menu Design",
+            "subtitle": "",
+            "description": "The existing menu of Parm and Cheese restaurant was analyzed and found visually insufficient, identifying a need for improvement. In the new menu design aimed at enriching the customer experience, high-resolution images were added for each pasta variety to enhance visual richness. Additionally, a user-friendly mechanism was developed to allow easy selection marking, speeding up and making the selection process interactive. Short descriptions and price information were added below each item, and the colors and fonts used in the design were carefully selected to reflect Parm and Cheese's brand identity."
+          },
+          "masa-takvimi-tasarimi": {
+            "title": "Desk Calendar Design",
+            "subtitle": "",
+            "description": "Specially designed for photography enthusiasts and aesthetic design lovers, this desk calendar not only tracks time but also aims to add an artistic touch to daily life. The camera lens concept brings the magical world of photography to desks. This special design desk calendar is not just an aesthetic object, but also a functional tool with a smart mechanism. This calendar, shaped like a camera lens, is equipped with a user-friendly mechanism."
+          }
+        }
       }
     },
     "items": {
