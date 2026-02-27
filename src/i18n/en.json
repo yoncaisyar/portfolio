@@ -18,6 +18,10 @@
     "categoryMenu": {
       "selectCategory": "Select Category"
     },
+    "slider": {
+      "prevAria": "Previous",
+      "nextAria": "Next"
+    },
     "categories": {
       "logo-tasarimi": {
         "title": "Logo Design",
@@ -230,12 +234,20 @@
   "contact": {
     "title": "Let's work together to transform your ideas into stunning designs",
     "cta": "Hire Me Now",
+    "ctaLink": "Contact me",
+    "copyLabel": "Copy email address",
+    "copied": "Copied",
+    "socialAria": "Social and portfolio links",
     "email": "Email",
     "phone": "Phone"
   },
   "footer": {
     "brand": "Yoncisyar",
     "copyright": "© 2025 - Yonca İşyar All rights reserved"
+  },
+  "errorBoundary": {
+    "title": "An error occurred",
+    "message": "The page encountered an unexpected error.",
+    "reloadButton": "Reload page"
   }
 }
-

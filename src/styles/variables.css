@@ -20,7 +20,16 @@
   --color-button-secondary: #ffffff;
 
   /* Overlay (project card detail) - dark theme */
+<<<<<<< HEAD
   --color-overlay-bg: linear-gradient(180deg, rgba(10, 31, 24, 0.2) 0%, rgba(10, 31, 24, 0.5) 50%, rgba(10, 31, 24, 0.95) 100%);
+=======
+  --color-overlay-bg: linear-gradient(
+    180deg,
+    rgba(10, 31, 24, 0.2) 0%,
+    rgba(10, 31, 24, 0.5) 50%,
+    rgba(10, 31, 24, 0.95) 100%
+  );
+>>>>>>> 633787d1c555db013412d31b61bd5f8f4cf8a7ea
   --color-overlay-text: #ffffff;
   --color-overlay-text-secondary: rgba(255, 255, 255, 0.85);
 
@@ -81,7 +90,7 @@
 }
 
 /* Light Theme */
-[data-theme="light"] {
+[data-theme='light'] {
   --color-bg-primary: #f8faf9;
   --color-bg-secondary: #e8f0ec;
   --color-bg-gradient-start: #c8e6d5;
@@ -101,6 +110,7 @@
   --color-button-primary: #16a34a;
   --color-button-secondary: #0a1f18;
 
+<<<<<<< HEAD
   /* Overlay (project card detail) - light theme: semi-dark gradient for strong readability */
   --color-overlay-bg: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.45) 50%, rgba(0, 0, 0, 0.82) 100%);
   --color-overlay-text: #ffffff;
@@ -108,3 +118,17 @@
 
   --shadow-glow: 0 0 30px rgba(22, 163, 74, 0.2);
 }
+=======
+  /* Overlay (project card detail) - light theme: light background, dark text */
+  --color-overlay-bg: linear-gradient(
+    180deg,
+    rgba(248, 250, 249, 0.4) 0%,
+    rgba(248, 250, 249, 0.85) 50%,
+    rgba(248, 250, 249, 0.97) 100%
+  );
+  --color-overlay-text: #0a1f18;
+  --color-overlay-text-secondary: rgba(10, 31, 24, 0.85);
+
+  --shadow-glow: 0 0 30px rgba(22, 163, 74, 0.2);
+}
+>>>>>>> 633787d1c555db013412d31b61bd5f8f4cf8a7ea
