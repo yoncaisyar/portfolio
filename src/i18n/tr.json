@@ -18,6 +18,10 @@
     "categoryMenu": {
       "selectCategory": "Kategori Seçin"
     },
+    "slider": {
+      "prevAria": "Önceki",
+      "nextAria": "Sonraki"
+    },
     "categories": {
       "logo-tasarimi": {
         "title": "Logo Tasarımı",
@@ -230,12 +234,20 @@
   "contact": {
     "title": "Fikirlerinizi çarpıcı tasarımlara dönüştürmek için birlikte çalışalım",
     "cta": "Hire Me Now",
+    "ctaLink": "Benimle iletişime geç",
+    "copyLabel": "E-posta adresini kopyala",
+    "copied": "Kopyalandı",
+    "socialAria": "Sosyal medya ve portfolyo bağlantıları",
     "email": "E-posta",
     "phone": "Telefon"
   },
   "footer": {
     "brand": "Yoncisyar",
     "copyright": "© 2025 - Yonca İşyar Tüm hakları saklıdır"
+  },
+  "errorBoundary": {
+    "title": "Bir hata oluştu",
+    "message": "Sayfa beklenmedik bir hatayla karşılaştı.",
+    "reloadButton": "Sayfayı Yenile"
   }
 }
-
