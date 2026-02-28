@@ -25,6 +25,7 @@ export default defineConfig({
     include: ['react', 'react-dom', 'react/jsx-runtime'],
   },
   build: {
+    emptyOutDir: true,
     reportCompressedSize: false,
     rollupOptions: {
       onwarn(warning, warn) {
