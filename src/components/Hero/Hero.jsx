@@ -6,7 +6,7 @@ import styles from './Hero.module.css';
 // Yonca's illustration - loaded from public folder for better performance
 const baseUrl = import.meta.env.BASE_URL;
 const heroImage = `${baseUrl}yonca-profil.png`;
-const cvPdfUrl = `${baseUrl}malisevdinoglu.pdf`;
+const cvPdfUrl = `${baseUrl}yoncaisyar_cv.pdf`;
 
 export default function Hero() {
   const { t } = useTranslation();
@@ -18,7 +18,7 @@ export default function Hero() {
   const handleDownloadCV = () => {
     const link = document.createElement('a');
     link.href = cvPdfUrl;
-    link.download = 'malisevdinoglu.pdf';
+    link.download = 'yoncaisyar_cv.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

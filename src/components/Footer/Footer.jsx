@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Linkedin, Mail, Phone } from 'lucide-react';
 import styles from './Footer.module.css';
 
 // Clover/Yonca SVG Logo
@@ -24,24 +23,6 @@ const CloverLogo = () => (
 export default function Footer() {
   const { t } = useTranslation();
 
-  const socialLinks = [
-    { 
-      icon: Linkedin, 
-      href: 'https://linkedin.com/in/yoncaisyar', 
-      label: 'LinkedIn' 
-    },
-    { 
-      icon: Mail, 
-      href: 'mailto:yoncaisyar2001@gmail.com', 
-      label: 'Email' 
-    },
-    { 
-      icon: Phone, 
-      href: 'tel:+905449294162', 
-      label: 'Phone' 
-    }
-  ];
-
   return (
     <footer className={styles.footer}>
       <div className={`container ${styles.container}`}>
@@ -57,35 +38,13 @@ export default function Footer() {
           <span className={styles.brandName}>{t('footer.brand')}</span>
         </motion.div>
 
-        {/* Social Links */}
-        <motion.div 
-          className={styles.social}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-        >
-          {socialLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              target={link.href.startsWith('http') ? '_blank' : undefined}
-              rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-              className={styles.socialLink}
-              aria-label={link.label}
-            >
-              <link.icon size={20} />
-            </a>
-          ))}
-        </motion.div>
-
         {/* Copyright */}
         <motion.p 
           className={styles.copyright}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
         >
           {t('footer.copyright')}
         </motion.p>
@@ -93,4 +52,3 @@ export default function Footer() {
     </footer>
   );
 }
-

@@ -18,6 +18,14 @@ export default function Navbar() {
   const projectsButtonRef = useRef(null);
   const lastScrollY = useRef(0);
 
+  // Mobil menü açıkken sayfanın kaydırılmasını engelle
+  useEffect(() => {
+    document.body.style.overflow = isMobileMenuOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;

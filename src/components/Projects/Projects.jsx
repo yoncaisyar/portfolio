@@ -125,6 +125,10 @@ function CategorySlider({ category }) {
 function ProjectCard({ project, categoryId, imageMode = 'cover', isVisible = false }) {
   const { t } = useTranslation();
   const [isHovered, setIsHovered] = useState(false);
+  const [isTapped, setIsTapped] = useState(false);
+  const cardRef = useRef(null);
+
+  const isActive = isHovered || isTapped;
 
   const hasMultipleImages = project.images && project.images.length > 1;
   const coverImage = project.images[0];
@@ -136,14 +140,34 @@ function ProjectCard({ project, categoryId, imageMode = 'cover', isVisible = fal
 
   const bgUrl = (src) => (isVisible ? `url(${src})` : 'none');
 
+  // Dokunmatik cihazlarda kart dışına tap yapılınca kapat
+  useEffect(() => {
+    if (!isTapped) return;
+    const handleOutside = (e) => {
+      if (cardRef.current && !cardRef.current.contains(e.target)) {
+        setIsTapped(false);
+      }
+    };
+    document.addEventListener('touchstart', handleOutside);
+    return () => document.removeEventListener('touchstart', handleOutside);
+  }, [isTapped]);
+
+  const handleCardClick = () => {
+    if (window.matchMedia('(hover: none)').matches) {
+      setIsTapped((prev) => !prev);
+    }
+  };
+
   return (
     <motion.div
+      ref={cardRef}
       className={styles.card}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={handleCardClick}
     >
       {/* Görsel */}
-      {isHovered && hasMultipleDetails ? (
+      {isActive && hasMultipleDetails ? (
         // 5+ görseli olan projeler için grid layout (Johnsons Baby)
         <div className={styles.multiDetailGrid}>
           {multiDetailImages.map((img, idx) => (
@@ -158,7 +182,7 @@ function ProjectCard({ project, categoryId, imageMode = 'cover', isVisible = fal
             />
           ))}
         </div>
-      ) : isHovered && hasSideBySideDetails ? (
+      ) : isActive && hasSideBySideDetails ? (
         // 3 görseli olan projeler için yan yana layout (ARBORİS)
         <div className={styles.sideBySideImages}>
           {detailImages.map((img, idx) => (
@@ -177,9 +201,9 @@ function ProjectCard({ project, categoryId, imageMode = 'cover', isVisible = fal
         // Normal görsel (kapak veya tek detay)
         <AnimatePresence mode="wait">
           <motion.div
-            key={isHovered && hasMultipleImages ? detailImage : coverImage}
+            key={isActive && hasMultipleImages ? detailImage : coverImage}
             className={imageMode === 'contain' ? styles.cardImageContain : styles.cardImage}
-            style={{ backgroundImage: bgUrl(isHovered && hasMultipleImages ? detailImage : coverImage) }}
+            style={{ backgroundImage: bgUrl(isActive && hasMultipleImages ? detailImage : coverImage) }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -188,16 +212,16 @@ function ProjectCard({ project, categoryId, imageMode = 'cover', isVisible = fal
         </AnimatePresence>
       )}
 
-      {/* Proje Başlığı - Görsel Altında Gölgeli Overlay (sadece hover kapalıyken) */}
-      {!isHovered && (
+      {/* Proje Başlığı - Görsel Altında Gölgeli Overlay (sadece aktif değilken) */}
+      {!isActive && (
         <div className={styles.titleOverlay}>
           <h3 className={styles.cardTitle}>{t(`projects.categories.${categoryId}.projects.${project.id}.title`)}</h3>
         </div>
       )}
 
-      {/* Hover Overlay */}
+      {/* Hover / Tap Overlay */}
       <AnimatePresence>
-        {isHovered && (
+        {isActive && (
           <motion.div
             className={styles.cardOverlay}
             initial={{ opacity: 0 }}

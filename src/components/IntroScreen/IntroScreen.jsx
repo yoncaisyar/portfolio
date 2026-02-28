@@ -2,19 +2,20 @@ import { useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import styles from './IntroScreen.module.css';
 
-const COLS = 16;
-const ROWS = 10;
-const CENTER_COL = (COLS - 1) / 2;
-const CENTER_ROW = (ROWS - 1) / 2;
-const MAX_DIST = Math.sqrt(CENTER_COL ** 2 + CENTER_ROW ** 2);
-
 export default function IntroScreen({ onComplete }) {
-  const cells = useMemo(() => {
-    return Array.from({ length: COLS * ROWS }, (_, i) => {
-      const col = i % COLS;
-      const row = Math.floor(i / COLS);
-      const dx = col - CENTER_COL;
-      const dy = row - CENTER_ROW;
+  const { cells, cols, rows } = useMemo(() => {
+    const isMobile = window.innerWidth < 768;
+    const cols = isMobile ? 8 : 16;
+    const rows = isMobile ? 6 : 10;
+    const centerCol = (cols - 1) / 2;
+    const centerRow = (rows - 1) / 2;
+    const maxDist = Math.sqrt(centerCol ** 2 + centerRow ** 2);
+
+    const cells = Array.from({ length: cols * rows }, (_, i) => {
+      const col = i % cols;
+      const row = Math.floor(i / cols);
+      const dx = col - centerCol;
+      const dy = row - centerRow;
       const dist = Math.sqrt(dx * dx + dy * dy);
 
       const baseAngle = dist < 0.01 ? Math.random() * Math.PI * 2 : Math.atan2(dy, dx);
@@ -24,12 +25,14 @@ export default function IntroScreen({ onComplete }) {
 
       return {
         id: i,
-        normalizedDist: dist / MAX_DIST,
+        normalizedDist: dist / maxDist,
         exitX: Math.cos(angle) * magnitude,
         exitY: Math.sin(angle) * magnitude,
         exitRotate: (Math.random() - 0.5) * 360,
       };
     });
+
+    return { cells, cols, rows };
   }, []);
 
   useEffect(() => {
@@ -63,7 +66,13 @@ export default function IntroScreen({ onComplete }) {
         <span className={styles.monogramLabel}>GRAFİK TASARIMCI</span>
       </motion.div>
 
-      <div className={styles.grid}>
+      <div
+        className={styles.grid}
+        style={{
+          gridTemplateColumns: `repeat(${cols}, 1fr)`,
+          gridTemplateRows: `repeat(${rows}, 1fr)`,
+        }}
+      >
         {cells.map((cell) => (
           <motion.div
             key={cell.id}

@@ -23,10 +23,12 @@ export default function CategoryMenu({ isOpen, onClose, triggerRef, selectedCate
 
     if (isOpen) {
       document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener('touchstart', handleClickOutside);
     }
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
     };
   }, [isOpen, onClose, triggerRef]);
 

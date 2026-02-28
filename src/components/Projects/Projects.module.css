@@ -424,6 +424,18 @@
   font-weight: 700;
 }
 
+/* Touch cihazlarda tap ile overlay açma */
+@media (hover: none) {
+  .card {
+    cursor: pointer;
+  }
+
+  .navButton {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
 /* Light theme: card border to separate from page background */
 [data-theme="light"] .card {
   border: 1px solid rgba(0, 0, 0, 0.1);
