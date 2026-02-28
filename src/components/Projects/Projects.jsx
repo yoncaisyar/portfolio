@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
@@ -37,7 +37,24 @@ export default function Projects() {
 function CategorySlider({ category }) {
   const { t } = useTranslation();
   const swiperRef = useRef(null);
+  const sectionRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const imageMode = category.imageMode || 'cover';
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '200px' }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
 
   const handlePrev = () => {
     swiperRef.current?.slidePrev();
@@ -47,10 +64,8 @@ function CategorySlider({ category }) {
     swiperRef.current?.slideNext();
   };
 
-  const activeProject = category.projects[activeIndex];
-
   return (
-    <div id={category.id} className={styles.categorySection}>
+    <div ref={sectionRef} id={category.id} className={styles.categorySection}>
       {/* Kategori Başlığı */}
       <motion.h3
         className={styles.categoryTitle}
@@ -89,7 +104,7 @@ function CategorySlider({ category }) {
           >
             {category.projects.map((project) => (
               <SwiperSlide key={project.id} className={styles.slide}>
-                <ProjectCard project={project} categoryId={category.id} />
+                <ProjectCard project={project} categoryId={category.id} imageMode={imageMode} isVisible={isVisible} />
               </SwiperSlide>
             ))}
           </Swiper>
@@ -107,7 +122,7 @@ function CategorySlider({ category }) {
   );
 }
 
-function ProjectCard({ project, categoryId }) {
+function ProjectCard({ project, categoryId, imageMode = 'cover', isVisible = false }) {
   const { t } = useTranslation();
   const [isHovered, setIsHovered] = useState(false);
 
@@ -118,6 +133,8 @@ function ProjectCard({ project, categoryId }) {
   const hasMultipleDetails = project.images && project.images.length > 5; // Johnsons Baby gibi 5+ detay görseli olanlar
   const detailImages = hasSideBySideDetails ? [project.images[1], project.images[2]] : [];
   const multiDetailImages = hasMultipleDetails ? project.images.slice(1) : []; // Kapak hariç tüm detay görselleri
+
+  const bgUrl = (src) => (isVisible ? `url(${src})` : 'none');
 
   return (
     <motion.div
@@ -132,8 +149,8 @@ function ProjectCard({ project, categoryId }) {
           {multiDetailImages.map((img, idx) => (
             <motion.div
               key={img}
-              className={styles.gridImage}
-              style={{ backgroundImage: `url(${img})` }}
+              className={imageMode === 'contain' ? styles.gridImageContain : styles.gridImage}
+              style={{ backgroundImage: bgUrl(img) }}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
@@ -147,8 +164,8 @@ function ProjectCard({ project, categoryId }) {
           {detailImages.map((img, idx) => (
             <motion.div
               key={img}
-              className={styles.sideBySideImage}
-              style={{ backgroundImage: `url(${img})` }}
+              className={imageMode === 'contain' ? styles.sideBySideImageContain : styles.sideBySideImage}
+              style={{ backgroundImage: bgUrl(img) }}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
@@ -161,8 +178,8 @@ function ProjectCard({ project, categoryId }) {
         <AnimatePresence mode="wait">
           <motion.div
             key={isHovered && hasMultipleImages ? detailImage : coverImage}
-            className={styles.cardImage}
-            style={{ backgroundImage: `url(${isHovered && hasMultipleImages ? detailImage : coverImage})` }}
+            className={imageMode === 'contain' ? styles.cardImageContain : styles.cardImage}
+            style={{ backgroundImage: bgUrl(isHovered && hasMultipleImages ? detailImage : coverImage) }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

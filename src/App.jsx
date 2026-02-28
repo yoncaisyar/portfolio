@@ -1,12 +1,14 @@
+import { lazy, Suspense } from 'react';
 import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/Navbar/Navbar';
 import TopControls from './components/TopControls/TopControls';
 import SideProgress from './components/SideProgress/SideProgress';
 import Hero from './components/Hero/Hero';
-import Projects from './components/Projects/Projects';
-import Contact from './components/Contact/Contact';
-import Footer from './components/Footer/Footer';
 import './styles/global.css';
+
+const Projects = lazy(() => import('./components/Projects/Projects'));
+const Contact  = lazy(() => import('./components/Contact/Contact'));
+const Footer   = lazy(() => import('./components/Footer/Footer'));
 
 function App() {
   return (
@@ -19,10 +21,14 @@ function App() {
         <SideProgress />
         <main>
           <Hero />
-          <Projects />
-          <Contact />
+          <Suspense fallback={null}>
+            <Projects />
+            <Contact />
+          </Suspense>
         </main>
-        <Footer />
+        <Suspense fallback={null}>
+          <Footer />
+        </Suspense>
       </div>
     </ThemeProvider>
   );

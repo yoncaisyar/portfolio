@@ -119,6 +119,21 @@
   background-repeat: no-repeat;
 }
 
+.cardImageContain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--color-bg-secondary);
+  background-origin: content-box;
+  background-clip: content-box;
+}
+
 /* Yan Yana Görseller (3 görseli olan projeler için) */
 .sideBySideImages {
   position: absolute;
@@ -137,6 +152,18 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.sideBySideImageContain {
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--color-bg-secondary);
+  background-origin: content-box;
+  background-clip: content-box;
 }
 
 /* Çoklu Detay Görselleri Grid (5+ görseli olan projeler için) */
@@ -160,6 +187,19 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  border-radius: var(--radius-sm);
+}
+
+.gridImageContain {
+  width: 100%;
+  height: 100%;
+  padding: 4px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--color-bg-secondary);
+  background-origin: content-box;
+  background-clip: content-box;
   border-radius: var(--radius-sm);
 }
 
