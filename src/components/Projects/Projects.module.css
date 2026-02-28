@@ -201,17 +201,14 @@
   margin: 0;
 }
 
-/* Hover Overlay */
+/* Hover Overlay — daha şeffaf, detay görünümü kapak kadar canlı (değerler variables.css) */
 .cardOverlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(180deg,
-      rgba(10, 31, 24, 0.2) 0%,
-      rgba(10, 31, 24, 0.5) 50%,
-      rgba(10, 31, 24, 0.95) 100%);
+  background: var(--color-overlay-bg);
   display: flex;
   align-items: flex-end;
   padding: var(--spacing-xl);
@@ -393,15 +390,15 @@
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
 }
 
-/* Light theme: grid images — richer contrast & saturation */
+/* Light theme: görseller daha canlı, silik görünmesin */
 [data-theme="light"] .gridImage {
-  filter: contrast(1.06) saturate(1.12) brightness(1.02);
+  filter: contrast(1.1) saturate(1.15) brightness(1.03);
 }
 
 [data-theme="light"] .sideBySideImage {
-  filter: contrast(1.06) saturate(1.12) brightness(1.02);
+  filter: contrast(1.1) saturate(1.15) brightness(1.03);
 }
 
 [data-theme="light"] .cardImage {
-  filter: contrast(1.04) saturate(1.08);
+  filter: contrast(1.08) saturate(1.12) brightness(1.04);
 }

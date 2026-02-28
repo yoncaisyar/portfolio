@@ -6,34 +6,10 @@ export default defineConfig({
   base: './',
   plugins: [react()],
   optimizeDeps: {
-    include: ['react', 'react-dom', 'i18next', 'react-i18next'],
-    esbuildOptions: {
-      target: 'esnext',
-    },
+    include: ['react', 'react-dom', 'react/jsx-runtime'],
   },
   build: {
     reportCompressedSize: false,
-    commonjsOptions: {
-      include: [/node_modules/],
-      namedExports: {
-        react: [
-          'Children', 'Component', 'Fragment', 'Profiler', 'PureComponent',
-          'StrictMode', 'Suspense', 'cloneElement', 'createContext',
-          'createElement', 'createRef', 'forwardRef', 'isValidElement',
-          'lazy', 'memo', 'startTransition', 'use', 'useActionState',
-          'useCallback', 'useContext', 'useDebugValue', 'useDeferredValue',
-          'useEffect', 'useId', 'useImperativeHandle', 'useInsertionEffect',
-          'useLayoutEffect', 'useMemo', 'useOptimistic', 'useReducer',
-          'useRef', 'useState', 'useSyncExternalStore', 'useTransition',
-          'version', 'cache',
-        ],
-        'react-dom': [
-          'createPortal', 'findDOMNode', 'flushSync', 'hydrate', 'render',
-          'unmountComponentAtNode', 'unstable_batchedUpdates',
-        ],
-        'react-dom/client': ['createRoot', 'hydrateRoot'],
-      },
-    },
     rollupOptions: {
       onwarn(warning, warn) {
         const msg = String(warning.message ?? '');

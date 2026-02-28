@@ -21,14 +21,14 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      
+
       // Sayfa başındaysa her zaman göster
       if (currentScrollY < 50) {
         setIsScrolledDown(false);
         setIsScrolled(false);
       } else {
         setIsScrolled(true);
-        
+
         // Scroll yönünü kontrol et
         if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
           // Aşağı scroll - gizle
@@ -38,10 +38,10 @@ export default function Navbar() {
           setIsScrolledDown(false);
         }
       }
-      
+
       lastScrollY.current = currentScrollY;
     };
-    
+
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -82,10 +82,10 @@ export default function Navbar() {
   return (
     <motion.nav
       className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''} ${isScrolledDown ? styles.hidden : ''}`}
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ 
-        y: isScrolledDown ? -100 : 0, 
-        opacity: 1 
+      initial={{ opacity: 0 }}
+      animate={{
+        y: isScrolledDown ? -100 : 0,
+        opacity: 1
       }}
       transition={{ duration: 0.3, ease: 'easeInOut' }}
     >

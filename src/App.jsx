@@ -13,7 +13,9 @@ function App() {
     <ThemeProvider>
       <div className="app">
         <Navbar />
-        <TopControls />
+        <div className="topBar">
+          <TopControls />
+        </div>
         <SideProgress />
         <main>
           <Hero />

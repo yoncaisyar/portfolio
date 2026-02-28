@@ -19,17 +19,8 @@
   --color-button-primary: rgba(30, 70, 50, 0.8);
   --color-button-secondary: #ffffff;
 
-  /* Overlay (project card detail) - dark theme */
-<<<<<<< HEAD
-  --color-overlay-bg: linear-gradient(180deg, rgba(10, 31, 24, 0.2) 0%, rgba(10, 31, 24, 0.5) 50%, rgba(10, 31, 24, 0.95) 100%);
-=======
-  --color-overlay-bg: linear-gradient(
-    180deg,
-    rgba(10, 31, 24, 0.2) 0%,
-    rgba(10, 31, 24, 0.5) 50%,
-    rgba(10, 31, 24, 0.95) 100%
-  );
->>>>>>> 633787d1c555db013412d31b61bd5f8f4cf8a7ea
+  /* Overlay (project card detail) - dark theme: daha şeffaf, detay kapak kadar canlı */
+  --color-overlay-bg: linear-gradient(180deg, rgba(10, 31, 24, 0.12) 0%, rgba(10, 31, 24, 0.4) 50%, rgba(10, 31, 24, 0.82) 100%);
   --color-overlay-text: #ffffff;
   --color-overlay-text-secondary: rgba(255, 255, 255, 0.85);
 
@@ -110,25 +101,10 @@
   --color-button-primary: #16a34a;
   --color-button-secondary: #0a1f18;
 
-<<<<<<< HEAD
-  /* Overlay (project card detail) - light theme: semi-dark gradient for strong readability */
-  --color-overlay-bg: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.45) 50%, rgba(0, 0, 0, 0.82) 100%);
-  --color-overlay-text: #ffffff;
-  --color-overlay-text-secondary: rgba(255, 255, 255, 0.92);
-
-  --shadow-glow: 0 0 30px rgba(22, 163, 74, 0.2);
-}
-=======
-  /* Overlay (project card detail) - light theme: light background, dark text */
-  --color-overlay-bg: linear-gradient(
-    180deg,
-    rgba(248, 250, 249, 0.4) 0%,
-    rgba(248, 250, 249, 0.85) 50%,
-    rgba(248, 250, 249, 0.97) 100%
-  );
+  /* Overlay (project card detail) - light theme: çok şeffaf, görsel öne çıksın */
+  --color-overlay-bg: linear-gradient(180deg, rgba(248, 250, 249, 0.04) 0%, rgba(248, 250, 249, 0.18) 50%, rgba(248, 250, 249, 0.52) 100%);
   --color-overlay-text: #0a1f18;
-  --color-overlay-text-secondary: rgba(10, 31, 24, 0.85);
+  --color-overlay-text-secondary: rgba(10, 31, 24, 0.9);
 
   --shadow-glow: 0 0 30px rgba(22, 163, 74, 0.2);
 }
->>>>>>> 633787d1c555db013412d31b61bd5f8f4cf8a7ea
