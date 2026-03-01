@@ -5,7 +5,7 @@ import styles from './Hero.module.css';
 
 // Yonca's illustration - loaded from public folder for better performance
 const baseUrl = import.meta.env.BASE_URL;
-const heroImage = `${baseUrl}yonca-profil.png`;
+const heroImage = `${baseUrl}yonca_profil.png`;
 const cvPdfUrl = `${baseUrl}yoncaisyar_cv.pdf`;
 
 export default function Hero() {
@@ -107,7 +107,6 @@ export default function Hero() {
           animate="visible"
         >
           <div className={styles.imageContainer}>
-            <div className={styles.imageBg} />
             <img
               src={heroImage}
               alt="Yonca İşyar"

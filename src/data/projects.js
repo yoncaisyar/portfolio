@@ -9,7 +9,7 @@ export const categories = [
     id: 'logo-tasarimi',
     imageMode: 'contain',
     projects: [
-      { id: 'arboris', images: [p('projects/logo_tasarimi/arboris1.jpeg'), p('projects/logo_tasarimi/arboris2.jpeg')] },
+      { id: 'arboris', images: [p('projects/logo_tasarimi/arboris1.png'), p('projects/logo_tasarimi/arboris2.jpeg')] },
       { id: 'selcuk', images: [p('projects/logo_tasarimi/selcuk1.jpeg'), p('projects/logo_tasarimi/selcuk2.jpeg'), p('projects/logo_tasarimi/selcuk22.jpeg')] },
       { id: 'wush', images: [p('projects/logo_tasarimi/wush1.jpeg'), p('projects/logo_tasarimi/wush2.jpeg')] },
     ],
@@ -19,8 +19,8 @@ export const categories = [
     imageMode: 'contain',
     projects: [
       { id: 'dior', images: [p('projects/afis_reklam/dior1.jpeg'), p('projects/afis_reklam/dior2.jpeg'), p('projects/afis_reklam/dior3.jpeg')] },
-      { id: 'yetenek-sinavi', images: [p('projects/afis_reklam/devlet1.jpeg'), p('projects/afis_reklam/devlet2.jpeg')] },
-      { id: 'arboris-afis', images: [p('projects/afis_reklam/arboriss1.jpeg'), p('projects/afis_reklam/arboriss2.jpeg')] },
+      { id: 'yetenek-sinavi', images: [p('projects/afis_reklam/devlet1.jpeg'), p('projects/afis_reklam/devlet2.png')] },
+      { id: 'arboris-afis', images: [p('projects/afis_reklam/arboriss2.jpeg'), p('projects/afis_reklam/arboriss1.jpeg')] },
       { id: 'bilgilendirme-yarisma', images: [p('projects/afis_reklam/food1.jpeg'), p('projects/afis_reklam/food2.jpeg')] },
       { id: 'selcuk-ecza-afis', images: [p('projects/afis_reklam/selcukecza1.jpeg'), p('projects/afis_reklam/selcukecza2.jpeg')] },
     ],
@@ -33,11 +33,11 @@ export const categories = [
         id: 'johnsons-baby',
         images: [
           p('projects/ambalaj_tasarimi/johnson1.jpeg'),
-          p('projects/ambalaj_tasarimi/johnson2.jpeg'),
-          p('projects/ambalaj_tasarimi/johnson3.jpeg'),
-          p('projects/ambalaj_tasarimi/johnson4.jpeg'),
-          p('projects/ambalaj_tasarimi/johnson5.jpeg'),
-          p('projects/ambalaj_tasarimi/johnson6.jpeg'),
+          p('projects/ambalaj_tasarimi/johnson2.png'),
+          p('projects/ambalaj_tasarimi/johnson3.png'),
+          p('projects/ambalaj_tasarimi/johnson4.png'),
+          p('projects/ambalaj_tasarimi/johnson5.png'),
+          p('projects/ambalaj_tasarimi/johnson6.png'),
         ],
       },
     ],
@@ -46,7 +46,7 @@ export const categories = [
     id: 'cocuk-kitabi-tasarimi',
     imageMode: 'contain',
     projects: [
-      { id: 'kitap-tasarim', images: [p('projects/cocuk_kitabi_tasarimi/cocuk1.jpeg'), p('projects/cocuk_kitabi_tasarimi/cocuk2.jpeg')] },
+      { id: 'kitap-tasarim', images: [p('projects/cocuk_kitabi_tasarimi/cocuk1.jpeg'), p('projects/cocuk_kitabi_tasarimi/cocuk2.png')] },
     ],
   },
   {
@@ -91,9 +91,9 @@ export const categories = [
     id: 'cesitli-tasarimlar',
     imageMode: 'contain',
     projects: [
-      { id: 'kutu-oyunu-tasarimi', images: [p('projects/cesitli_tasarimlar/kutu%20oyunu1.png'), p('projects/cesitli_tasarimlar/kutuoyunu2.png')] },
-      { id: 'brosur-tasarimi-1', images: [p('projects/cesitli_tasarimlar/brosur1.png'), p('projects/cesitli_tasarimlar/bbrosur1.png')] },
-      { id: 'brosur-tasarimi-2', images: [p('projects/cesitli_tasarimlar/brosur2.png'), p('projects/cesitli_tasarimlar/bbrosur2.png')] },
+      { id: 'kutu-oyunu-tasarimi', images: [p('projects/cesitli_tasarimlar/kutuoyunu1.png'), p('projects/cesitli_tasarimlar/kutuoyunu2.png')] },
+      { id: 'brosur-tasarimi-1', images: [p('projects/cesitli_tasarimlar/brosur1.png'), p('projects/cesitli_tasarimlar/brosur2.png')] },
+      { id: 'brosur-tasarimi-2', images: [p('projects/cesitli_tasarimlar/bbrosur1.png'), p('projects/cesitli_tasarimlar/bbrosur2.png')] },
       { id: 'bilgilendirme-infografik', images: [p('projects/cesitli_tasarimlar/bilgilendirme1.png')] },
       { id: 'menu-tasarimi', images: [p('projects/cesitli_tasarimlar/menu1.png')] },
       { id: 'masa-takvimi-tasarimi', images: [p('projects/cesitli_tasarimlar/takvim1.png')] },
