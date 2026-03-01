@@ -34,6 +34,8 @@
 }
 
 .navItem {
+  display: inline-flex;
+  align-items: center;
   padding: var(--spacing-sm) var(--spacing-md);
   color: var(--color-text-secondary);
   font-size: var(--font-size-sm);
@@ -55,6 +57,15 @@
 
 .navItem.hasDropdown {
   position: relative;
+}
+
+.dropdownArrow {
+  margin-left: 4px;
+  transition: transform var(--transition-normal);
+}
+
+.navItem.hasDropdown .dropdownArrow {
+  transform: rotate(180deg);
 }
 
 /* Projects Nav Wrapper for Dropdown */

@@ -63,7 +63,7 @@ export default function IntroScreen({ onComplete }) {
         }}
       >
         <span className={styles.monogramLetters}>YONCA İŞYAR</span>
-        <span className={styles.monogramLabel}>GRAFİK TASARIMCI</span>
+        <span className={styles.monogramLabel}>Graphic Designer</span>
       </motion.div>
 
       <div

@@ -12,6 +12,11 @@
   top: calc(100% + var(--spacing-xs));
   left: 0;
   min-width: 200px;
+}
+
+.dropdownMenuCenter {
+  left: 50%;
+  margin-left: -100px;
   background: rgba(10, 31, 24, 0.88);
   backdrop-filter: blur(28px);
   -webkit-backdrop-filter: blur(28px);

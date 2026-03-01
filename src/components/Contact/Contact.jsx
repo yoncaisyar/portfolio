@@ -109,7 +109,6 @@ export default function Contact() {
                   </span>
                   <span className={styles.socialInfo}>
                     <span className={styles.socialLabel}>{link.label}</span>
-                    <span className={styles.socialHandle}>{link.handle}</span>
                   </span>
                 </motion.a>
               ))}

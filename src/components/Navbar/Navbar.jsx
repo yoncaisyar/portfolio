@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
 import { useScrollSection } from '../../hooks/useScrollSection';
 import CategoryMenu from '../Projects/CategoryMenu';
 import styles from './Navbar.module.css';
@@ -115,6 +116,7 @@ export default function Navbar() {
                     onClick={handleProjectsClick}
                   >
                     {item.label}
+                    <ChevronDown size={14} className={styles.dropdownArrow} />
                   </button>
                   <CategoryMenu
                     isOpen={isProjectsMenuOpen}

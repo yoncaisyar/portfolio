@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { categories } from '../../data/projects';
 import styles from './CategoryMenu.module.css';
 
-export default function CategoryMenu({ isOpen, onClose, triggerRef, selectedCategory, onCategorySelect }) {
+export default function CategoryMenu({ isOpen, onClose, triggerRef, selectedCategory, onCategorySelect, alignCenter }) {
   const { t } = useTranslation();
   const dropdownRef = useRef(null);
 
@@ -51,7 +51,7 @@ export default function CategoryMenu({ isOpen, onClose, triggerRef, selectedCate
       {isOpen && (
         <motion.div
           ref={dropdownRef}
-          className={styles.dropdownMenu}
+          className={`${styles.dropdownMenu} ${alignCenter ? styles.dropdownMenuCenter : ''}`}
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}

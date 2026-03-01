@@ -17,6 +17,13 @@
   align-items: center;
 }
 
+.projectsWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .indicator {
   position: relative;
   width: 12px;

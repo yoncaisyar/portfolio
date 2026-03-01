@@ -61,8 +61,11 @@
 .cvButton {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: var(--spacing-sm);
   padding: var(--spacing-md) var(--spacing-xl);
+  min-width: 10rem;
+  white-space: nowrap;
   color: var(--color-text-primary);
   font-size: var(--font-size-sm);
   font-weight: 500;
