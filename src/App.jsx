@@ -3,6 +3,7 @@ import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/Navbar/Navbar';
 import TopControls from './components/TopControls/TopControls';
 import SideProgress from './components/SideProgress/SideProgress';
+import MobileScrollUI from './components/MobileScrollUI/MobileScrollUI';
 import Hero from './components/Hero/Hero';
 import IntroScreen from './components/IntroScreen/IntroScreen';
 import Projects from './components/Projects/Projects';
@@ -22,6 +23,7 @@ function App() {
           <TopControls />
         </div>
         <SideProgress />
+        <MobileScrollUI />
         <main>
           <Hero />
           <Projects />

@@ -1,0 +1,75 @@
+/* Sadece mobilde görünür - masaüstünde gizli */
+.wrapper {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: calc(var(--z-fixed) - 1);
+    pointer-events: none;
+  }
+
+  .wrapper .scrollToTop {
+    pointer-events: auto;
+  }
+
+  /* Üstte ince scroll ilerleme çubuğu */
+  .progressTrack {
+    width: 100%;
+    height: 4px;
+    background: var(--color-glass-bg);
+  }
+
+  .progressFill {
+    height: 100%;
+    background: var(--color-accent);
+    border-radius: 0 var(--radius-full) var(--radius-full) 0;
+    transition: width 0.1s linear;
+  }
+
+  /* Yukarı çık butonu - sağ alt */
+  .scrollToTop {
+    position: fixed;
+    right: var(--spacing-md);
+    bottom: var(--spacing-xl);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-primary);
+    background: var(--color-glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--color-glass-border);
+    border-radius: 50%;
+    box-shadow: var(--shadow-md);
+    cursor: pointer;
+    transition: opacity var(--transition-normal), transform var(--transition-normal);
+  }
+
+  .scrollToTop:hover {
+    background: var(--color-glass-bg-hover);
+    border-color: var(--color-accent);
+    transform: scale(1.05);
+  }
+
+  .scrollToTop:active {
+    transform: scale(0.98);
+  }
+
+  .scrollToTop {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .scrollToTop.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}

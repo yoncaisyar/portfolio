@@ -310,7 +310,7 @@
   }
 
   .sliderContainer {
-    gap: var(--spacing-sm);
+    gap: 0;
   }
 
   .swiperWrapper {
@@ -320,6 +320,31 @@
   .navButton {
     width: 52px;
     height: 52px;
+  }
+
+  /* Oklar görsellerin üzerinde, en sol ve en sağda */
+  .prevButton {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+  }
+
+  .prevButton:hover {
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  .nextButton {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+  }
+
+  .nextButton:hover {
+    transform: translateY(-50%) scale(1.1);
   }
 
   .card {
